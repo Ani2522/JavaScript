@@ -1,26 +1,32 @@
-console.log("Hello World");
-console.log(document.body.childNodes);
-console.log(document.body.childNodes[1].childNodes);
-let cont = document.body.childNodes[1]
+console.log("Hello World"); // Prints "Hello World" in the console
 
-console.log(cont.firstChild);
-console.log(cont.lastChild);
+console.log(document.body.childNodes); // Logs all child nodes of the <body> (including text nodes, comments, etc.)
+console.log(document.body.childNodes[1].childNodes); // Logs child nodes of the 2nd child of <body>
 
-console.log("First element chile is : ") ;
-console.log(cont.firstElementChild);
+let cont = document.body.childNodes[1]; // Stores the 2nd child of <body> into 'cont'
 
-console.log(cont.lastElementChild);
+console.log(cont.firstChild); // Logs the first child (could be a text node or element)
+console.log(cont.lastChild); // Logs the last child (could be a text node or element)
 
-cont.lastElementChild.style.color = 'red';
-cont.lastElementChild.style.backgroundColor = "yellow";
+console.log("First element child is : "); 
+console.log(cont.firstElementChild); // Logs the first **element** child (ignores text nodes)
 
-console.log(cont.lastElementChild.parentElement);
+console.log(cont.lastElementChild); // Logs the last **element** child (ignores text nodes)
 
+// Change the style of the last element child
+cont.lastElementChild.style.color = 'red'; // Sets text color to red
+cont.lastElementChild.style.backgroundColor = "yellow"; // Sets background to yellow
 
-console.log(document.body.firstElementChild.children)
+console.log(cont.lastElementChild.parentElement); // Logs the parent element of the last element child
 
-console.log(document.body.firstElementChild.children[3].nextElementSibling);
-console.log(document.body.firstElementChild.children[3].previousElementSibling);
+console.log(document.body.firstElementChild.children); 
+// Logs all children (HTMLCollection) of the first element inside <body>
 
-let table = document.body.children[1];
-console.log(table.rows);
+console.log(document.body.firstElementChild.children[3].nextElementSibling); 
+// Logs the element right after the 4th child (index 3) of body’s first element
+
+console.log(document.body.firstElementChild.children[3].previousElementSibling); 
+// Logs the element right before the 4th child (index 3) of body’s first element
+
+let table = document.body.children[1]; // Stores the 2nd child of <body> into 'table' (likely a <table>)
+console.log(table.rows); // Logs all rows (HTMLCollection of <tr>) inside the table

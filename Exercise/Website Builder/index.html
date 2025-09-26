@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+
+        }
+
+        .box {
+            width: 90vw;
+            height: 19vh;
+            background-color: black;
+            display: flex;
+        }
+
+            .image {
+      width: 27%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative; /* 🔑 So .length is positioned relative to this */
+    }
+
+    img {
+      border-radius: 12px;
+      height: 90%;
+      width: auto;
+      max-width: 100%;
+    }
+
+    .length {
+      font-family: 'Roboto', sans-serif;
+      position: absolute; /* 🔑 Absolute inside .image */
+      bottom: 12px; /* adjust spacing from bottom */
+      right: 18px; /* adjust spacing from right */
+      background-color: black;
+      color: white;
+      padding: 3px 7px;
+      border-radius: 6px;
+      font-size: 0.9rem;
+    }
+
+        .content {
+            width: 100%;
+            /* display: flex; */
+            /* align-items: center; */
+        }
+
+        .title {
+            margin-top: 10px;
+            width: 100%;
+            color: rgb(241, 241, 241);
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+            font-size: 23px;
+
+        }
+
+        .stats {
+            height: 50%;
+            width: 100%;
+            color: rgb(170, 170, 170);
+            font-family: 'Roboto', sans-serif;
+            padding-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="image">
+                <img
+                    alt="">
+                <div class="length">
+                </div>
+            </div>
+            <div class="content">
+                <div class="title">
+                </div>
+                <div class="stats">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
